@@ -1,0 +1,25 @@
+{
+  "name": "hapi-chat",
+  "version": "0.1.0",
+  "description": "A chat app built with Hapi.js and Socket.io",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nodecasts-io/hapi-chat.git"
+  },
+  "keywords": [
+    "hapi",
+    "socket",
+    "node",
+    "chat"
+  ],
+  "author": "Jon Kuperman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Nodecasts-io/hapi-chat/issues"
+  },
+  "homepage": "https://github.com/Nodecasts-io/hapi-chat#readme"
+}
