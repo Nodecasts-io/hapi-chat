@@ -4,20 +4,24 @@ const Hapi = require('hapi')
 
 const server = new Hapi.Server()
 server.connection({ port: 3000 })
+server.register(require('vision'), (err) => {
+  if (err)
+    throw err
+
+  server.views({
+    engines: {
+      html: require('handlebars')
+    },
+    relativeTo: __dirname,
+    path: 'views'
+  })
+})
 
 server.route({
     method: 'GET',
     path: '/',
     handler: function (request, reply) {
-        reply('Hello, world!')
-    }
-})
-
-server.route({
-    method: 'GET',
-    path: '/{name}',
-    handler: function (request, reply) {
-        reply('Hello, ' + encodeURIComponent(request.params.name) + '!')
+        reply.view('index')
     }
 })
 
